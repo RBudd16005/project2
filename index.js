@@ -10,7 +10,7 @@ express()
       .set('view engine', 'ejs')
       .get('/', (req, res) => res.render('pages/home'))
       .post('/results', function(req, res, next){
-        pg.connect(conString, function(err, client, done) {
+        pg.Connection(conString, function(err, client, done) {
           if (err){
             return console.error('error fetching client from pool', err)
           }
