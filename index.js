@@ -11,7 +11,7 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/home'))
   .post('/results', function(req, res){
-    var sql = "SELECT * FROM sounds";
+    /*var sql = "SELECT * FROM sounds";
     const pool = new Pool({connectionString: connectionString});
     
     pool.query(sql, function(err, result){
@@ -21,7 +21,7 @@ express()
       }
 
       console.log("Back from DB with result: " + result.rows);
-    })
-    //res.render('pages/results', {results: req.body});
+    })*/
+    res.render('pages/results');
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
