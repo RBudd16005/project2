@@ -8,7 +8,7 @@ const connection = mysql.createConnection({
   user: "dskeruymiecfsm",
   password: "07dbc5813711491b0b13f31c2877ddb1ca00e29dbc40242e6923affa5ca804c1",
   database: "ddbdushbi20f4j",
-  ssl = true
+  ssl: true
 })
 connection.connect(function(err){
   if (err) {
