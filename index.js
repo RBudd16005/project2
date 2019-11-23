@@ -17,7 +17,7 @@ express()
             console.error(err);
           }
           console.log(result);
+          res.render('pages/results', {result: result});
         });
-        //res.render('pages/results');
       })
       .listen(PORT, () => console.log(`Listening on ${ PORT }`));

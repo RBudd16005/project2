@@ -3,8 +3,20 @@
         <title>Results</title>
     </head>
     <body>
-        <div id="body_postage"></div>
+        <div id="body_name"></div>
         <br>
-        <div id="body_price"></div>
+        <div id="body_author"></div>
+        <br>
+        <div id="body_date"></div>
+
+        <script>
+            var name = <%= result.name %>;
+            var author = <%= result.author %>;
+            var date = <%= result.created %>;
+            
+            document.getElementById("body_name").innerHTML = "Title: " + name;
+            document.getElementById("body_author").innerHTML = "Author: " + author;
+            document.getElementById("body_date").innerHTML = "Date Created: " + date;
+        </script>
     </body>
 </html>
