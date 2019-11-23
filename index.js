@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
+const PORT = process.env.PORT || 5000;
 const pg = require('pg');
 
 module.exports = router;
