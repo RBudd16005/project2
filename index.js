@@ -11,9 +11,9 @@ express()
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/home'))
   .post('/results', function(req, res){
-    /*var sql = "SELECT * FROM sounds";
+    var sql = "SELECT * FROM sounds";
     const pool = new Pool({connectionString: connectionString});
-    
+    /*
     pool.query(sql, function(err, result){
       if (err){
         console.log("Error in query: ")
