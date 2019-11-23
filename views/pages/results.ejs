@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Results</title>
+    </head>
+    <body>
+        <div id="body_postage"></div>
+        <br>
+        <div id="body_price"></div>
+        
+        <script>
+                var weight = <%= results.weight %>;
+                var postage = <%= results.postage %>;
+                var price = 0;
+                switch(postage){
+                case 1:
+                    price = 0.55 + ((weight - 1) * 0.15);
+                    postage = "Letters (Stamped)"
+                    break;
+                case 2:
+                    price = 0.50 + ((weight - 1) * 0.15);
+                    postage = "Letters (Metered)";
+                    break;
+                case 3:
+                    price = 1 + ((weight - 1) * 0.15);
+                    postage = "Large Envelopes (Flats)";
+                    break;
+
+                case 4:
+                    var add = 0;
+                    var i;
+                    for (i = 0; i < weight; i++) {
+                        if (i != 0){
+                            if ((i % 4) == 0)
+                            {
+                                add += 0.73;
+                            }
+                        }
+                    }
+                    price = add + 3.66;
+                    postage = "First-Class Package Service—Retail";
+                    break;
+                }
+                document.getElementById("body_price").innerHTML = "Price: $" + price;
+                document.getElementById("body_postage").innerHTML = "Postage: " + postage;
+                </script>
+    </body>
+</html>
