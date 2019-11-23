@@ -10,11 +10,10 @@
         <div id="body_date"></div>
 
         <script>
-            var name = <%= result[0].name %>;
-            var author = <%= result[0].author %>;
-            var date = 01-12-2019;
+            var name = toStrong(<%= result[0].name %>);
+            var author = toString(<%= result[0].author %>);
+            var date = toString(<%= result[0].created %>);
 
-            console.log(result);
             document.getElementById("body_name").innerHTML = "Title: " + name;
             document.getElementById("body_author").innerHTML = "Author: " + author;
             document.getElementById("body_date").innerHTML = "Date Created: " + date;
