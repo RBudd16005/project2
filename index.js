@@ -10,10 +10,12 @@ const connection = mysql.createConnection({
   database: "ddbdushbi20f4j"
 })
 connection.connect(function(err){
-  if (err){
-    console.error("Error: " + err);
+  if (err) {
+    console.error(err);
   }
-  console.log("connected to db");
+  else {
+    console.log("connected to db");
+  }
 })
 
 express()
