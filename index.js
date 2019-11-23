@@ -9,7 +9,6 @@ const conString = "postgres://dskeruymiecfsm:07dbc5813711491b0b13f31c2877ddb1ca0
 
 
   router.use(express.static(path.join(__dirname, 'public')));
-  router.use(bodyParser.urlencoded({extended:false}));
   express().set('views', path.join(__dirname, 'views'));
   express().set('view engine', 'ejs');
   router.get('/', (req, res) => res.render('pages/home'));
