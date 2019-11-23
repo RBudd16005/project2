@@ -10,9 +10,8 @@
         <div id="body_date"></div>
 
         <script>
-            var result = <%= result %>;
-            var json = JSON.parse(result);
-            console.log(json);
+            var result = <%= db %>;
+            console.log(result);
             document.getElementById("body_name").innerHTML = "Title: " + name;
             document.getElementById("body_author").innerHTML = "Author: " + author;
             document.getElementById("body_date").innerHTML = "Date Created: " + date;

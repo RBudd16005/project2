@@ -16,7 +16,8 @@ express()
           if (err) {
             console.error(err);
           }
-          res.render('pages/results', {result: result});
+          var db = JSON.parse(result);
+          res.render('pages/results', {result: db});
         });
       })
       .listen(PORT, () => console.log(`Listening on ${ PORT }`));
