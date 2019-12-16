@@ -1,10 +1,35 @@
 <html>
     <head>
-        <title>Library Search</title>
+        <title>Library</title>
     </head>
     <body>
-        <form name="form" action="/results" method="POST">
-            <button type="submit" name="submit_form">All Sounds</button>
+        <h1>Upload New Sound</h1>
+        <form name="form" action="/results_add" method="POST">
+            <h2>Title: </h2>
+            <input type="text" name="title" placeholder="Title to be added..."> <br>
+            <h2>Author: </h2>
+            <input type="text" name="author" placeholder="Author..."> <br>
+            <h2>Date Uploaded: </h2>
+            <input type="date" name="created"> <br>
+            <button type="submit" name="submit_form">Add</button>
+        </form>
+
+        <h1>Remove Sound From Library</h1>
+        <form name="form" action="/results_remove" method="POST">
+            <h2>Title: </h2>
+            <input type="text" name="title" placeholder="Title to be removed..."> <br>
+            <button type="submit" name="submit_form">Remove</button>
+        </form>
+
+        <h1>Edit Exsisting Sound</h1>
+        <form name="form" action="/results_edit" method="POST">
+            <h2>Title: </h2>
+            <input type="text" name="title" placeholder="Title to be edited..."> <br>
+            <h2>Author: </h2>
+            <input type="text" name="author" placeholder="New Author..."> <br>
+            <h2>Date Uploaded: </h2>
+            <input type="date" name="created"> <br>
+            <button type="submit" name="submit_form">Edit</button>
         </form>
     </body>
 </html>

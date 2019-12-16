@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Addition Confirmation</title>
+    </head>
+    <body>
+        <h1>New Sound Added to Library</h1> <br>
+        <div id="body_name"></div>
+        <br>
+        <div id="body_author"></div>
+        <br>
+        <div id="body_date"></div>
+
+        <script>
+            var name = '<%= result[0].name %>';
+            var author = '<%= result[0].author %>';
+            var date = '<%= result[0].created %>';
+
+            document.getElementById("body_name").innerHTML = "Title: " + name;
+            document.getElementById("body_author").innerHTML = "Author: " + author;
+            document.getElementById("body_date").innerHTML = "Date Created: " + date;
+        </script>
+    </body>
+</html>
