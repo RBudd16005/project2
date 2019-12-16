@@ -9,8 +9,9 @@
 
         <script>
             var db = '<%-JSON.stringify(result)%>';
-            console.log(db.rowCount);
-            console.log(db.rows[0]);
+            var db_parsed = JSON.parse(db);
+            console.log(db_parsed.rowCount);
+            console.log(db_parsed.rows[0]);
             var text_body = "";
 
             if (rows.length != 0) {
