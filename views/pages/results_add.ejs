@@ -8,15 +8,15 @@
         <div id="body"></div>
 
         <script>
-            var rows = '<%-JSON.stringify(result)%>';
-            console.log(Object.keys(rows).length);
-            console.log(rows);
+            var db = '<%-JSON.stringify(result)%>';
+            console.log(db.rowCount);
+            console.log(db.rows[0]);
             var text_body = "";
 
             if (rows.length != 0) {
                 var i;
-                for (i = 0; i < rows.length; i++) {
-                    text_body += "Title: " + rows[i].name + "<br>Author: " + rows[i].author + "<br>Date Uploaded: " + rows[i].created + "<br><br>";
+                for (i = 0; i < 1; i++) {
+                    text_body += "Title: " + db.rows[i].name + "<br>Author: " + db.rows[i].author + "<br>Date Uploaded: " + db.rows[i].created + "<br><br>";
                 }
             }
             else {
