@@ -27,6 +27,7 @@ express()
           if (err) {
             console.error(err);
           }
+          console.log(result);
           res.render('pages/results_add', {result: result.rows});
         });
       })
