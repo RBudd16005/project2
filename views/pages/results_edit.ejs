@@ -4,20 +4,28 @@
     </head>
     <body>
         <h1>Sound Edited Successfully</h1> <br>
-        <div id="body_name"></div>
-        <br>
-        <div id="body_author"></div>
-        <br>
-        <div id="body_date"></div>
+        <h2>If you do not see the changes you made, refresh the page.</h2>
+        <div id="body"></div>
 
         <script>
-            var name = '<%= result[0].name %>';
-            var author = '<%= result[0].author %>';
-            var date = '<%= result[0].created %>';
+            var db = '<%-JSON.stringify(result)%>';
+            var db_parsed = JSON.parse(db);
+            var text_body = "";
 
-            document.getElementById("body_name").innerHTML = "Title: " + name;
-            document.getElementById("body_author").innerHTML = "Author: " + author;
-            document.getElementById("body_date").innerHTML = "Date Created: " + date;
+            if (db_parsed.rowCount != 0) {
+                var i;
+                for (i = 0; i < db_parsed.rowCount; i++) {
+                    text_body += "Title: " + db_parsed.rows[i].name + "<br>Author: " + db_parsed.rows[i].author + "<br>Date Uploaded: " + db_parsed.rows[i].created + "<br><br>";
+                }
+            }
+            else {
+                text_body = "No sounds in library <br>";
+            }
+            document.getElementById("body").innerHTML = text_body;
         </script>
+
+        <form action="/" name="return" method="GET">
+            <button type="submit" name="return_home">Return Home</button>
+        </form>
     </body>
 </html>

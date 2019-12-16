@@ -43,7 +43,7 @@ express()
           if (err) {
             console.error(err);
           }
-          res.render('pages/results_remove', {result: result.rows});
+          res.render('pages/results_remove', {result: result});
         });
       })
       .post('/results_edit', function(req, res){
@@ -61,7 +61,7 @@ express()
           if (err) {
             console.error(err);
           }
-          res.render('pages/results_edit', {result: result.rows});
+          res.render('pages/results_edit', {result: result});
         });
       })
       .listen(PORT, () => console.log(`Listening on ${ PORT }`));
