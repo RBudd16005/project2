@@ -8,7 +8,7 @@
         <div id="body"></div>
 
         <script>
-            var rows = '<%= result.rows %>';
+            var rows = '<%-JSON.stringify(result)%>';
             console.log(Object.keys(rows).length);
             console.log(rows);
             var text_body = "";
