@@ -16,7 +16,7 @@ express()
         var title = req.body.title;
         var creator = req.body.author;
         var uploaded = req.body.created;
-        var sql = "INSERT INTO sounds (username, name, author, created) VALUES ('ryan', \'title\', \'creator\', \'uploaded\');";
+        var sql = "INSERT INTO sounds (username, name, author, created) VALUES ('ryan', '" + title + "', '" + creator + "', '" + uploaded + "');";
         pool.query(sql, function(err, result){
           if (err) {
             console.error(err);
