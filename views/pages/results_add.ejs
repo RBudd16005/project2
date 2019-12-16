@@ -4,20 +4,27 @@
     </head>
     <body>
         <h1>New Sound Added to Library</h1> <br>
-        <div id="body_name"></div>
-        <br>
-        <div id="body_author"></div>
-        <br>
-        <div id="body_date"></div>
+        <h2>If you do not see the changes you made, refresh the page.</h2> <br>
+        <div id="body"></div>
 
         <script>
-            var name = '<%= result[0].name %>';
-            var author = '<%= result[0].author %>';
-            var date = '<%= result[0].created %>';
+            var rows = '<%= result %>';
+            var text_body;
 
-            document.getElementById("body_name").innerHTML = "Title: " + name;
-            document.getElementById("body_author").innerHTML = "Author: " + author;
-            document.getElementById("body_date").innerHTML = "Date Created: " + date;
+            if (rows.length != 0) {
+                var i;
+                for (i = 0; i < rows.length; i++) {
+                    text_body += "Title: " + rows[i].name + "<br>Author: " + rows[i].author + "<br>Date Uploaded: " + rows[i].created + "<br>";
+                }
+            }
+            else {
+                text_body = "No sounds in library <br>";
+            }
+            document.getElementById("body").innerHTML = text_body;
         </script>
+
+        <form action="/" name="return" method="GET">
+            <button type="submit" name="return_home">Return Home</button>
+        </form>
     </body>
 </html>
