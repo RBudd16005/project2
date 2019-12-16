@@ -21,6 +21,12 @@ express()
           if (err) {
             console.error(err);
           }
+        });
+        var sql2 = "SELECT * FROM sounds";
+        pool.query(sql2, function(err, result){
+          if (err) {
+            console.error(err);
+          }
           res.render('pages/results_add', {result: result});
         });
       })
@@ -28,6 +34,12 @@ express()
         var title = req.body.title;
         var sql = "DELETE FROM sounds WHERE name='" + title + "';";
         pool.query(sql, function(err, result){
+          if (err) {
+            console.error(err);
+          }
+        });
+        var sql2 = "SELECT * FROM sounds";
+        pool.query(sql2, function(err, result){
           if (err) {
             console.error(err);
           }
