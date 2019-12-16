@@ -14,6 +14,7 @@ express()
       .get('/', (req, res) => res.render('pages/home'))
       .post('/results_add', function(req, res){
         var title = req.body.title;
+        console.log(title);
         var creator = req.body.author;
         var uploaded = req.body.created;
         var sql = "INSERT INTO sounds (username, name, author, created) VALUES ('ryan', '" + title + "', '" + creator + "', '" + uploaded + "');";
