@@ -3,18 +3,20 @@
         <title>Addition Confirmation</title>
     </head>
     <body>
-        <h1>New Sound Added to Library</h1> <br>
-        <h2>If you do not see the changes you made, refresh the page.</h2> <br>
+        <h1>New Sound Added to Library</h1>
+        <h2>If you do not see the changes you made, refresh the page.</h2>
         <div id="body"></div>
 
         <script>
             var rows = '<%= result %>';
+            console.log(rows.length);
+            console.log(rows);
             var text_body;
 
             if (rows.length != 0) {
                 var i;
                 for (i = 0; i < rows.length; i++) {
-                    text_body += "Title: " + rows[i].name + "<br>Author: " + rows[i].author + "<br>Date Uploaded: " + rows[i].created + "<br>";
+                    text_body += "Title: " + rows[i].name + "<br>Author: " + rows[i].author + "<br>Date Uploaded: " + rows[i].created + "<br><br>";
                 }
             }
             else {
