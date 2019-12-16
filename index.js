@@ -14,7 +14,6 @@ express()
       .get('/', (req, res) => res.render('pages/home'))
       .post('/results_add', function(req, res){
         var title = req.body.title;
-        console.log(title);
         var creator = req.body.author;
         var uploaded = req.body.created;
         var sql = "INSERT INTO sounds (username, name, author, created) VALUES ('ryan', '" + title + "', '" + creator + "', '" + uploaded + "');";
@@ -28,13 +27,12 @@ express()
           if (err) {
             console.error(err);
           }
-          console.log(result.rows);
           res.render('pages/results_add', {result: result.rows});
         });
       })
       .post('/results_remove', function(req, res){
         var title = req.body.title;
-        var sql = "DELETE FROM sounds WHERE name=\'title\';";
+        var sql = "DELETE FROM sounds WHERE name='" + title + "';";
         pool.query(sql, function(err, result){
           if (err) {
             console.error(err);
@@ -52,7 +50,7 @@ express()
         var title = req.body.title;
         var creator = req.body.author;
         var uploaded = req.body.created;
-        var sql = "UPDATE sounds SET author='creator', created='uploaded' WHERE name='title';";
+        var sql = "UPDATE sounds SET author='" + creator + "', created='" + uploaded + "' WHERE name='" + title + "';";
         pool.query(sql, function(err, result){
           if (err) {
             console.error(err);
