@@ -1,0 +1,250 @@
+/*Globals*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*Header Styles*/
+
+.header {
+    width: 100%;
+    height: 80px;
+    display: block;
+    background-color: black;
+}
+
+.inner_header {
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo_container a {
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logo_container a h1 {
+    color: white;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 32px;
+}
+
+.logo_container a h1 span{
+    font-weight: 800;
+    color: Orange;
+}
+
+.navigation {
+    float: right;
+    height: 100%;
+}
+
+.navigation a {
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+
+.navigation a li {
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Search Bar*/
+.search_bar {
+    width: 100%;
+    display: block;
+    background-color: black;
+}
+
+.inner_search_bar {
+    width: 1000px;
+    height: 5%;
+    display: block;
+    margin: 0 auto;
+}
+
+.inner_search_bar button {
+    padding: 10px;
+    color: white;
+    background-color: black;
+    float: right;
+}
+
+.inner_search_bar input {
+    padding: 10px;
+    width: 35%;
+    float: right;
+}
+
+/*Filler Styles*/
+.filler {
+    height: 80%;
+    color: orange;
+    padding: 20px;
+}
+
+/*Image Styles*/
+#image_1 {
+    height: 250px;
+    width: 100%;
+}
+
+/*Sign In Styles*/
+.sign_in {
+    display: block;
+    width: 100%;
+    padding: 200px;
+}
+
+.inner_sign_in {
+    width: 50%;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: lightgray;
+}
+
+.inner_sign_in input {
+    width: 100%;
+    padding: 20px;
+}
+
+.inner_sign_in button {
+    width: 100%;
+    padding: 20px;
+    background-color: orange;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inner_sign_in p {
+    float: left;
+}
+
+/*Sign Up Styles*/
+.sign_in {
+    display: block;
+    width: 100%;
+    padding: 200px;
+}
+
+.inner_sign_in {
+    width: 50%;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: lightgray;
+}
+
+.inner_sign_in input {
+    width: 100%;
+    padding: 20px;
+}
+
+.inner_sign_in button {
+    width: 100%;
+    padding: 20px;
+    background-color: orange;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inner_sign_in p {
+    float: left;
+}
+
+/*Sign Up Styles*/
+.sign_up {
+    display: block;
+    width: 100%;
+    padding: 200px;
+}
+
+.inner_sign_up {
+    width: 50%;
+    border: 1px solid gray;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: lightgray;
+}
+
+.inner_sign_up input {
+    width: 100%;
+    padding: 20px;
+}
+
+.inner_sign_up button {
+    width: 100%;
+    padding: 20px;
+    background-color: orange;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inner_sign_up h1 {
+    padding: 20px;
+}
+
+/*Footer Styles*/
+.footer {
+    width: 100%;
+    height: 20%;
+    display: block;
+    background-color: orange;
+}
+
+.inner_footer {
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.suggestions {
+    float: left;
+    height: 100%;
+}
+
+.suggestions a {
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 10px;
+}
+
+.suggestions a li {
+    display: table-cell;
+    vertical-align: middle;
+    color: black;
+}
+
+.footer_2 {
+    width: 100%;
+    height: 20%;
+    display: block;
+    background-color: black;
+}
+
+/*ID Styles*/
+
+#language {
+    color: blue;
+}
+
+#success {
+    height: 80%;
+    color: orange;
+    padding: 20px;
+}

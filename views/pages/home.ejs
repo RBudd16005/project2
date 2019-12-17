@@ -1,8 +1,38 @@
 <html>
     <head>
-        <title>Library</title>
+        <meta charset="UTF-8">
+        <title>Sound Biscuit Library</title>
+        <link rel="stylesheet" type="text/css" href="../public/stylesheets/soundbiscuit.css">
     </head>
     <body>
+        <div class="header">
+            <div class="inner_header">
+                    <div class="logo_container">
+                            <a href="home.html"><h1>Sound<span>Biscuit</span></h1></a>
+                    </div>
+
+                    <ul class="navigation">
+                            <a href="../home.html"><li>Home</li></a>
+                            <a href="#"><li>About</li></a>
+                            <a href="#"><li>FAQs</li></a>
+                            <a href="#"><li>Support</li></a>
+                            <a href="../signin.html"><li>Sign In</li></a>
+                    </ul>
+            </div>
+    </div>
+
+    <div class="search_bar">
+            <div class="inner_search_bar">
+                    <form action="search.php" method="get">
+                            <button type="submit" name="search_submit">Search</button>
+                            <input type="text" name="search" placeholder="Search does not work yet...">
+                    </form>
+            </div>
+    </div>
+
+    <div>
+            <img id="image_1" src="../public/sounds.jpg">
+    </div>
         <h1>Upload New Sound</h1>
         <form name="form" action="/results_add" method="POST">
             <h2>Title: </h2>
@@ -31,5 +61,23 @@
             <input type="date" name="created"> <br>
             <button type="submit" name="submit_form_edit">Edit</button>
         </form>
+        <div class="footer">
+            <div class="inner_footer">
+                    <ul class="suggestions">
+                            <a href="#"><li>Popular searches</li></a>
+                            <a href="#"><li>Directory</li></a>
+                            <a href="#"><li>About us</li></a>
+                            <a href="#"><li>Blog</li></a>
+                            <a href="#"><li>Jobs</li></a>
+                            <a href="#"><li>Developers</li></a>
+                            <a href="#"><li>Help</li></a>
+                            <a href="#"><li>Legal</li></a>
+                            <a href="#"><li>Privacy</li></a>
+                            <a href="#"><li>Cookies</li></a>
+                            <a href="#"><li>Imprint</li></a>
+                            <a href="#"><li>Charts</li></a>
+                    </ul>
+            </div>
+    </div>
     </body>
 </html>
