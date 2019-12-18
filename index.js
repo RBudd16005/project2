@@ -7,7 +7,7 @@ const connectionString = "postgres://dskeruymiecfsm:07dbc5813711491b0b13f31c2877
 const pool = new Pool({connectionString: connectionString});
 
 express()
-      .use(express.static(path.join(__dirname, 'public')))
+      .use(express.static(path.join(__dirname + 'public')))
       .use(bodyParser.urlencoded({extended:false}))
       .set('views', path.join(__dirname, 'views'))
       .set('view engine', 'ejs')
